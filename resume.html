@@ -1,107 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amazon Clone</title>
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-        
-        .resume-container{
-            width: 80%;
-            margin: 20px auto;
-            padding: 20px;
-            border: 2px solid black;
-            background-color: #fff;
-        }
+/* NAVBAR */
+nav{
+    background:#131921;
+    height:60px;
+    display:flex;
+    align-items:center;
+    padding:0 20px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:10;
+}
+nav .logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    margin-right:20px;
+}
+nav input{
+    flex:1;
+    padding:7px;
+}
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+}
 
-        
-        h1{
-            text-align: center;
-            margin-bottom: 5px;
-        }
+.hero{
+    margin-top:70px;
+    height:300px;
+    background:url("https://m.media-amazon.com/images/I/61zAjw4bqPL._SX3000_.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.hero h1{
+    background:linear-gradient(135deg,#ff9900,#ffd814);
+    padding:20px 40px;
+    border-radius:12px;
+    color:#131921;
+    font-size:32px;
+    box-shadow:0 8px 18px rgba(0,0,0,0.6);
+}
 
-        
-        .line{
-            width: 100%;
-            height: 2px;
-            background: black;
-            margin-bottom: 20px;
-        }
- table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 6px;
-        }
-    </style>
+/* PRODUCTS */
+.products{
+    background:#e3e6e6;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:20px;
+}
+
+.box{
+    background:white;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+.box img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+}
+.box h3{
+    font-size:16px;
+    margin-bottom:10px;
+}
+.box a{
+    color:#007185;
+    text-decoration:none;
+    font-size:14px;
+}
+footer{
+    background:#232f3e;
+    color:white;
+    padding:40px 20px;
+}
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+footer h4{
+    margin-bottom:10px;
+}
+footer p{
+    font-size:14px;
+    line-height:1.6;
+}
+.copy{
+    text-align:center;
+    margin-top:20px;
+    font-size:13px;
+}
+</style>
 </head>
 
 <body>
 
-    <div class="resume-container">
-        
-        <h1><u>My Resume</u></h1>
-        <div class="line"></div>
+<!-- NAV -->
+<nav>
+    <div class="logo">amazon</div>
+    <input type="text" placeholder="Search Amazon">
+    <a href="#">Sign In</a>
+    <a href="#">Orders</a>
+    <a href="#">Cart</a>
+</nav>
 
-        <h2><u>Name</u></h2>
-        <p><h3><i>Arpit Patel</i></h3></p>
+<!-- HERO SALE -->
+<div class="hero">
+    <h1>Amazon Great Indian Sale</h1>
+</div>
 
-        <h2><u>Contact</u></h2>
-        <ul>
-            <li><b><u>Email:</u></b> arpit.25b01011120@abes.ac.in</li>
-            <li><b><u>Phone:</u></b> 9336415246</li>
-            <li><b><u>Address:</u></b> Ghaziabad, Uttar Pradesh, India</li>
-        </ul>
+<!-- PRODUCTS -->
+<div class="products">
+    <!-- ROW 1 -->
+    <div class="box"><h3>Electronics</h3><img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Mobiles</h3><img src="https://m.media-amazon.com/images/I/71d1ytcCntL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Fashion</h3><img src="https://m.media-amazon.com/images/I/71li-ujtlUL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Watches</h3><img src="https://m.media-amazon.com/images/I/71xj8v0yqQL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Beauty</h3><img src="https://m.media-amazon.com/images/I/61fq5P-yXkL._AC_UY218_.jpg"><a href="#">See more</a></div>
 
-        <h2><u>About Me</u></h2>
-        <ul>
-            <li>Myself B.Tech CSE 1st year student.</li>
-            <li>Currently in ABES Engineering College Ghaziabad.</li>
-        </ul>
+    <!-- ROW 2 -->
+    <div class="box"><h3>Laptops</h3><img src="https://m.media-amazon.com/images/I/71an9eiBxpL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Headphones</h3><img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Books</h3><img src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Toys</h3><img src="https://m.media-amazon.com/images/I/71k5nR-l+SL._AC_UY218_.jpg"><a href="#">See more</a></div>
+    <div class="box"><h3>Furniture</h3><img src="https://m.media-amazon.com/images/I/71an9eiBxpL._AC_UY218_.jpg"><a href="#">See more</a></div>
+</div>
 
-        <h2><u>Skills</u></h2>
-        <ul>
- <li>HTML</li>
-            <li>Python</li>
-            <li>C++</li>
-        </ul>
-
-        <h2><u>Education</u></h2>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>Institute</th>
-                <th>Year</th>
-            </tr>
-            <tr>
-                <td>B.Tech CSE</td>
-                <td>ABES College</td>
-                <td>2025</td>
-            </tr>
-            <tr>
-                <td>12th Grade</td>
-                <td>Divine Sainik School</td>
-                <td>2024</td>
-            </tr>
-            <tr>
-                <td>10th Grade</td>
-                <td>Divine Sainik School</td>
-                <td>2022</td>
-            </tr>
-        </table>
-
-        <h2><u>Hobbies</u></h2>
-        <ul>
-            <li>Coding HTML</li>
-            <li>Badminton</li>
-  <li>Watching tech videos</li>
-        </ul>
-
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div>
+            <h4>Get to Know Us</h4>
+            <p>About Amazon</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+        </div>
+        <div>
+            <h4>Connect with Us</h4>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+        <div>
+            <h4>Make Money</h4>
+            <p>Sell on Amazon</p>
+            <p>Affiliate Program</p>
+            <p>Advertise</p>
+        </div>
+        <div>
+            <h4>Help</h4>
+            <p>Payments</p>
+            <p>Returns</p>
+            <p>Customer Care</p>
+        </div>
     </div>
+    <div class="copy">© 2025 Amazon Clone</div>
+</footer>
 
 </body>
 </html>
